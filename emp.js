@@ -12,10 +12,38 @@ function addItem() {
       alert("News are already there");
     } else {
       li.setAttribute("id", inputdata);
-      li.appendChild(document.createTextNode(inputdata));
+      li.classList.add("li-item");
+
+      li.appendChild(getFirstChild(inputdata));
+      li.appendChild(getSecondChild(inputdata));
       lists.appendChild(li);
+
       arr1.push(inputdata);
     }
   }
   document.getElementById("inputdata").value = "";
+}
+
+function getFirstChild(text) {
+  let elem = document.createElement("div");
+  elem.appendChild(document.createTextNode("👉" + " " + text));
+  return elem;
+}
+
+function getSecondChild(parentId) {
+  let elem = document.createElement("div");
+  elem.appendChild(document.createTextNode(" ❌"));
+  elem.onclick = function () {
+    parentElement = document.getElementById(parentId);
+    parentElement.remove();
+  };
+  return elem;
+}
+
+function displayNews() {
+  if (document.getElementById("demo").style.display === "none") {
+    element = document.getElementById("demo").style.display = "grid";
+  } else {
+    element = document.getElementById("demo").style.display = "none";
+  }
 }

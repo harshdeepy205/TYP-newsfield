@@ -300,6 +300,9 @@ a {
     width: 86%;
   }
 }
+
+.container ul li span {
+}
 /* card */
 .card-details {
   background: #f5f5f5;
@@ -336,11 +339,11 @@ a {
 .cdbody ul li {
   /* background-color: rgb(212, 209, 209); */
   outline: none;
-  width: 635px;
+  /* width: 635px; */
   height: 40px;
   font-size: 22px;
   position: relative;
-  display: block;
+  /* display: block; */
   padding: 5px 10px;
   margin-bottom: 10px;
   /* background-color: rgb(207, 206, 206); */
@@ -350,6 +353,27 @@ a {
 }
 .cdbody ul li input {
   background-color: rgb(207, 206, 206);
+}
+.cdbody ul li span {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 50px;
+  padding: 5px 10px;
+
+  text-align: center;
+  background: red;
+}
+.cdbody ul li .listitem {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.li-item {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .input-field textarea {
@@ -368,6 +392,13 @@ a {
 }
 .button button {
   margin-left: 10px;
+  width: 128px;
+  height: 43px;
+  font-size: 18px;
+}
+
+.btn {
+  /* margin-left: 10px; */
   width: 128px;
   height: 43px;
   font-size: 18px;
