@@ -403,3 +403,9 @@ a {
   height: 43px;
   font-size: 18px;
 }
+
+@media (max-width: 360px) {
+  .wrap {
+    width: 100%;
+  }
+}
