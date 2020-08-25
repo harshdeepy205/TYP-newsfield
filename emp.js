@@ -47,3 +47,12 @@ function displayNews() {
     element = document.getElementById("demo").style.display = "none";
   }
 }
+
+
+function addNew() {
+  if (document.getElementById("demo1").style.display === "none") {
+    element1 = document.getElementById("demo1").style.display = "grid";
+  } else {
+    element1 = document.getElementById("demo1").style.display = "none";
+  }
+}

@@ -472,3 +472,11 @@ a {
   padding: 30px;
   background: rgba(0px 0px 0.2px 0.2px);
 }
+
+.field {
+  border: none;
+  border-radius: 8px;
+  height: 35px;
+  width: 350px;
+  outline: none;
+}

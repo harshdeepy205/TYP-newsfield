@@ -328,30 +328,33 @@
 
     <!-- Add new card -->
     <div class="viewmore">
-      <center> <button class="btn">Add new file</button></center>
-      <div class="add-new-form">
+      <center> <button class="btn" onclick="addNew()">Add new file</button></center>
+
+      <div class="add-new-form" id="demo1" style="display: none;">
         <table class="table" cellspacing="10">
           <tr>
             <td><b>Name:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" id="field"></td>
+            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
           </tr>
           <tr>
             <td><b>Description:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" id="field"></td>
+            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
           </tr>
           <tr>
             <td><b>Github Url:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" id="field"></td>
+            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
           </tr>
           <tr>
             <td><b>LinkedIn Url:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" id="field"></td>
+            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
           </tr>
           <tr>
             <td><b>Instagram Url:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" id="field"></td>
+            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
           </tr>
         </table>
+        <center> <button class="btn">Submit</button></center>
+
       </div>
 
     </div>
