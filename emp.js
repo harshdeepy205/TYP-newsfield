@@ -32,7 +32,7 @@ function getFirstChild(text) {
 
 function getSecondChild(parentId) {
   let elem = document.createElement("div");
-  elem.appendChild(document.createTextNode(" ❌"));
+  elem.appendChild(document.createTextNode("❌"));
   elem.onclick = function () {
     parentElement = document.getElementById(parentId);
     parentElement.remove();
