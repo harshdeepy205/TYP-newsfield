@@ -131,7 +131,7 @@
 
 
 
-    <div class="divCards">
+    <div class="divCards" id="divCards">
       <div class="register-box">
         <center>
           <h2>Harshdeep Yadav</h2>
@@ -143,15 +143,15 @@
           <center>
             <h3>For Info</h3>
           </center>
-          <a href="https://github.com/harshdeepy205" class="btn-img">
+          <a href="https://github.com/harshdeepy205" target="_blank" class="btn-img">
             <i class="fa fa-github-square fa-2x " aria-hidden="true"></i>
           </a>
-          <a href="#" class="btn-img">
+          <a href="#" target="_blank" class="btn-img">
 
             <i class="fa fa-linkedin-square fa-2x " aria-hidden="true"></i>
           </a>
-          <a href="#" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
-          <a href="#" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -270,7 +270,7 @@
         </div>
       </div>
 
-      <div class="register-box">
+      <div class="register-box" id="1110">
         <center>
           <h2>Sakshi Mishra</h2>
         </center>
@@ -281,16 +281,19 @@
           <center>
             <h3>For Info</h3>
           </center>
-          <a href="#" class="btn-img">
+          <a href="#" target="_blank" class="btn-img">
             <i class="fa fa-github-square fa-2x " aria-hidden="true"></i>
           </a>
-          <a href="#" class="btn-img">
+          <a href="#" target="_blank" class="btn-img">
 
             <i class="fa fa-linkedin-square fa-2x " aria-hidden="true"></i>
           </a>
-          <a href="#" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
-          <a href="#" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
         </div>
+
+        <!-- <button onclick="removeCard(this.parentNode.id)">delete</button> -->
+
       </div>
 
       <div class="register-box">
@@ -304,15 +307,15 @@
           <center>
             <h3>For Info</h3>
           </center>
-          <a href="#" class="btn-img">
+          <a href="#" target="_blank" class="btn-img">
             <i class="fa fa-github-square fa-2x " aria-hidden="true"></i>
           </a>
-          <a href="#" class="btn-img">
+          <a href="#" target="_blank" class="btn-img">
 
             <i class="fa fa-linkedin-square fa-2x " aria-hidden="true"></i>
           </a>
-          <a href="#" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
-          <a href="#" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+          <a href="#" target="_blank" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -334,26 +337,34 @@
         <table class="table" cellspacing="10">
           <tr>
             <td><b>Name:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
+            <td><input type="text" name="new_name" placeholder="Enter Name here" class="field" id="new_name"></td>
           </tr>
           <tr>
             <td><b>Description:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
+            <td><input type="text" name="about_me" placeholder="Enter Name here" class="field" id="about_me"></td>
           </tr>
           <tr>
             <td><b>Github Url:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
+            <td><input type="text" name="github_url" placeholder="Enter Name here" class="field" id="github_url"></td>
           </tr>
           <tr>
             <td><b>LinkedIn Url:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
+            <td><input type="text" name="linkedin_url" placeholder="Enter Name here" class="field" id="linkedin_url">
+            </td>
           </tr>
           <tr>
             <td><b>Instagram Url:</b></td>
-            <td><input type="text" name="fname" placeholder="Enter Name here" class="field"></td>
+            <td><input type="text" name="instagram_url" placeholder="Enter Name here" class="field" id="instagram_url">
+            </td>
+          </tr>
+          <tr>
+            <td><b>Twitter Url:</b></td>
+            <td><input type="text" name="twitter_url" placeholder="Enter Name here" class="field" id="twitter_url"></td>
           </tr>
         </table>
-        <center> <button class="btn">Submit</button></center>
+        <center> <button class="btn"
+            onclick="addNewCard(document.getElementById('new_name').value,document.getElementById('about_me').value,document.getElementById('github_url').value,document.getElementById('linkedin_url').value,document.getElementById('instagram_url').value,document.getElementById('twitter_url').value)">Submit</button>
+        </center>
 
       </div>
 
