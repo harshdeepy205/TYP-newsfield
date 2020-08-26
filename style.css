@@ -419,10 +419,20 @@ a {
   background-color: rgb(223, 217, 217);
   border: none;
   outline: none;
-  width: 500px;
+  width: 99%;
   height: 55px;
   font-size: 22px;
   margin-top: 30px;
+  margin-left: 3px;
+}
+
+.input-field {
+  background: grey;
+  margin-top: 12px;
+  border-left: 39px;
+  border-top-left-radius: 29px;
+  border-bottom-right-radius: 50px;
+  background: linear-gradient(57deg, #333333, #AEA79F);
 }
 
 @media (max-width: 547px) {
@@ -435,18 +445,44 @@ a {
   margin-left: 10px;
   width: 128px;
   height: 43px;
+  /* margin-top: 10px; */
   font-size: 18px;
+  border: none;
+
 }
 
 .btn {
-  /* margin-left: 10px; */
+  align-content: center;
   width: 128px;
   height: 43px;
   font-size: 18px;
+  margin-top: 15px;
+  background: green;
+  border: none;
 }
+
+.deleteBtn {
+  font-size: 27px;
+  margin-top: 10px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 
 @media (max-width: 360px) {
   .wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 636px) {
+  .add-new-form {
+    width: 100%;
+  }
+
+  .field {
     width: 100%;
   }
 }
@@ -480,4 +516,19 @@ a {
   width: 350px;
   outline: none;
   font-size: 19px;
+}
+
+/* @media (max-width: 1768px) {
+  .input-field textarea {
+    margin-left: 82px;
+    width: 100%;
+
+  }
+} */
+
+@media (max-width: 1152px) {
+  .input-field textarea {
+    margin-left: 2px;
+    width: 99%;
+  }
 }

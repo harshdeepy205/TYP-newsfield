@@ -49,6 +49,9 @@ function displayNews() {
 }
 
 
+
+
+
 function addNew() {
   if (document.getElementById("demo1").style.display === "none") {
     element1 = document.getElementById("demo1").style.display = "grid";
@@ -85,8 +88,40 @@ function addNewCard(name, description, github_url, linkedin_url, instagram_url, 
     <a href="${instagram_url}" target="_blank" class="btn-img"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
     <a href="${twitter_url}"  target="_blank" class="btn-img"><i class="fa fa-twitter-square fa-2x " aria-hidden="true"></i></a>
   </div>
-  <button onCLick ="removeCard(this.parentNode.id)" style="margin-top:14px; cursor:pointer;"> ❌ </button>
+  <button onCLick ="removeCard(this.parentNode.id)" class="deleteBtn"> ❌ </button>
 </div>`
+
+  document.getElementById('demo1').innerHTML = `<table class="table" cellspacing="10">
+          <tr>
+            <td><b>Name:</b></td>
+            <td><input type="text" name="new_name" placeholder="Enter Name here" class="field" id="new_name"></td>
+          </tr>
+          <tr>
+            <td><b>Description:</b></td>
+            <td><input type="text" name="about_me" placeholder="Enter Name here" class="field" id="about_me"></td>
+          </tr>
+          <tr>
+            <td><b>Github Url:</b></td>
+            <td><input type="text" name="github_url" placeholder="Enter Name here" class="field" id="github_url"></td>
+          </tr>
+          <tr>
+            <td><b>LinkedIn Url:</b></td>
+            <td><input type="text" name="linkedin_url" placeholder="Enter Name here" class="field" id="linkedin_url">
+            </td>
+          </tr>
+          <tr>
+            <td><b>Instagram Url:</b></td>
+            <td><input type="text" name="instagram_url" placeholder="Enter Name here" class="field" id="instagram_url">
+            </td>
+          </tr>
+          <tr>
+            <td><b>Twitter Url:</b></td>
+            <td><input type="text" name="twitter_url" placeholder="Enter Name here" class="field" id="twitter_url"></td>
+          </tr>
+        </table>
+        <center> <button class="btn"
+            onclick="addNewCard(document.getElementById('new_name').value,document.getElementById('about_me').value,document.getElementById('github_url').value,document.getElementById('linkedin_url').value,document.getElementById('instagram_url').value,document.getElementById('twitter_url').value)">Submit</button>
+        </center>`
 }
 
 function removeCard(id_card) {
@@ -95,4 +130,13 @@ function removeCard(id_card) {
 
   document.getElementById(id_card).style.display = 'none'
 
+}
+
+
+function empty() {
+  var x;
+  x = document.getElementById("new_name").value, document.getElementById('about_me').value, document.getElementById('github_url').value, document.getElementById('linkedin_url').value, document.getElementById('instagram_url').value, document.getElementById('twitter_url').value;
+  if (x == "") {
+    alert("Enter a Valid Roll Number");
+  };
 }
