@@ -61,13 +61,31 @@ function addNew() {
 }
 
 function addNewCard(name, description, github_url, linkedin_url, instagram_url, twitter_url) {
-  console.log("addnewCrdWork", Date.now())
-  console.log(name, description, github_url, linkedin_url, instagram_url, twitter_url)
+
+  var check = true
+  var x;
+  x = [document.getElementById("new_name").value,
+    document.getElementById('about_me').value,
+    document.getElementById('github_url').value,
+    document.getElementById('linkedin_url').value,
+    document.getElementById('instagram_url').value,
+    document.getElementById('twitter_url').value
+  ];
+  x.forEach((el) => {
+    if (el == "") {
+      check = false
+    }
+  });
+  if (check == false) {
+    alert("Enter the Details First!");
+  } else {
+    console.log("addnewCrdWork", Date.now())
+    console.log(name, description, github_url, linkedin_url, instagram_url, twitter_url)
 
 
-  console.log(document.getElementById("divCards"))
+    console.log(document.getElementById("divCards"))
 
-  document.getElementById("divCards").innerHTML += `<div class="register-box" id="${Date.now()}">
+    document.getElementById("divCards").innerHTML += `<div class="register-box" id="${Date.now()}">
   <center>
     <h2>${name}</h2>
   </center>
@@ -91,7 +109,7 @@ function addNewCard(name, description, github_url, linkedin_url, instagram_url, 
   <button onCLick ="removeCard(this.parentNode.id)" class="deleteBtn"> ❌ </button>
 </div>`
 
-  document.getElementById('demo1').innerHTML = `<table class="table" cellspacing="10">
+    document.getElementById('demo1').innerHTML = `<table class="table" cellspacing="10">
           <tr>
             <td><b>Name:</b></td>
             <td><input type="text" name="new_name" placeholder="Enter Name here" class="field" id="new_name"></td>
@@ -122,6 +140,8 @@ function addNewCard(name, description, github_url, linkedin_url, instagram_url, 
         <center> <button class="btn"
             onclick="addNewCard(document.getElementById('new_name').value,document.getElementById('about_me').value,document.getElementById('github_url').value,document.getElementById('linkedin_url').value,document.getElementById('instagram_url').value,document.getElementById('twitter_url').value)">Submit</button>
         </center>`
+  }
+
 }
 
 function removeCard(id_card) {
@@ -133,10 +153,15 @@ function removeCard(id_card) {
 }
 
 
-function empty() {
-  var x;
-  x = document.getElementById("new_name").value, document.getElementById('about_me').value, document.getElementById('github_url').value, document.getElementById('linkedin_url').value, document.getElementById('instagram_url').value, document.getElementById('twitter_url').value;
-  if (x == "") {
-    alert("Enter a Valid Roll Number");
-  };
-}
+// function empty() {
+//   var x;
+//   x = document.getElementById("new_name").value,
+//     document.getElementById('about_me').value,
+//     document.getElementById('github_url').value,
+//     document.getElementById('linkedin_url').value,
+//     document.getElementById('instagram_url').value,
+//     document.getElementById('twitter_url').value;
+//   if (x == "") {
+//     alert("Enter the Details First!");
+//   };
+// }

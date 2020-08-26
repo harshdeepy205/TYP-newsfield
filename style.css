@@ -432,7 +432,11 @@ a {
   border-left: 39px;
   border-top-left-radius: 29px;
   border-bottom-right-radius: 50px;
-  background: linear-gradient(57deg, #333333, #AEA79F);
+  /* background: linear-gradient(57deg, #333333, #AEA79F); */
+  background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  /* background-color #20bf55;
+background-image linear-gradient(315deg, #20bf55 0%, #01baef 74%); */
+
 }
 
 @media (max-width: 547px) {
@@ -530,5 +534,15 @@ a {
   .input-field textarea {
     margin-left: 2px;
     width: 99%;
+  }
+}
+
+@media (max-width: 400px) {
+  .field {
+    width: 100%;
+  }
+
+  .add-new-form {
+    width: 100%;
   }
 }
